@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap');
+
+@theme {
+  --color-ink: #0F1729;
+  --color-ink-light: #17213A;
+  --color-amber: #E8A33D;
+  --color-offwhite: #F5F3EE;
+  --color-slate: #8B93A7;
+  --color-success: #4ADE80;
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-ink);
+  color: var(--color-offwhite);
+  font-family: var(--font-body);
+  margin: 0;
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb { background: #2A3555; border-radius: 8px; }
+
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 2px solid var(--color-amber);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
