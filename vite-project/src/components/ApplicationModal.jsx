@@ -65,12 +65,12 @@ const ApplicationModal = ({ application, job, onClose, onMarkApplied }) => {
           <CopyBlock label="LinkedIn connection message" text={m?.linkedinMessage} />
 
           <div className="flex gap-3 mt-6">
-            
+            <a
               href={job?.originalPostingUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 text-center py-2.5 rounded-lg border border-white/10 text-offwhite text-sm font-medium hover:border-amber/50 transition-colors"
-            <a>
+            >
               Open original posting
             </a>
             {application.status !== "applied" ? (

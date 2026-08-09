@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 
+import Landing from "./pages/Landing";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
@@ -16,39 +17,40 @@ function App() {
     <BrowserRouter>
       <AuthProvider>
         <Routes>
+          {/* Landing page — pehla page */}
+          <Route path="/" element={<Landing />} />
+
           {/* Public routes */}
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
 
           {/* Protected routes */}
-           <Route
+          <Route
             path="/dashboard"
             element={
               <ProtectedRoute>
                 <Dashboard />
               </ProtectedRoute>
             }
-          /> 
-         <Route
+          />
+          <Route
             path="/resume"
             element={
               <ProtectedRoute>
                 <ResumeUpload />
               </ProtectedRoute>
             }
-          /> 
-           <Route
+          />
+          <Route
             path="/preferences"
             element={
               <ProtectedRoute>
                 <Preferences />
               </ProtectedRoute>
             }
-          /> 
+          />
 
-          {/* Default redirect */}
-           <Route path="/" element={<Navigate to="/dashboard" replace />} /> 
-           <Route path="*" element={<Navigate to="/dashboard" replace />} /> 
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </AuthProvider>
     </BrowserRouter>
