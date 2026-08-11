@@ -2,7 +2,7 @@
 
 The frontend for **ApplyAI**, an agentic internship application platform. Upload a resume, set your preferences, and let the agent match you to internships and draft tailored application materials for each one — you stay in control of every submission.
 
-**Live app:** [https://your-vercel-url.vercel.app](https://your-vercel-url.vercel.app)
+**Live app:** [https://applyinterviewai-frontend.vercel.app/](https://applyinterviewai-frontend.vercel.app/)
 **Backend repo:** [applyinterviewaibackend](https://github.com/yashsharma954/applyinterviewaibackend)
 
 ---
